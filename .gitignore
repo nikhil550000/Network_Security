@@ -3,3 +3,4 @@ nenv
 setup.py
 __pycache__
 *.egg-info/
+*.log
