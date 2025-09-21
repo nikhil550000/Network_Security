@@ -3,10 +3,10 @@ from dotenv import load_dotenv
 from pymongo.mongo_client import MongoClient
 
 load_dotenv()
-uri = os.getenv("MONGO_DB_URL")
+url = os.getenv("MONGO_DB_URL")
 
 # Create a new client and connect to the server
-client = MongoClient(uri)
+client = MongoClient(url)
 
 # Send a ping to confirm a successful connection
 try:
