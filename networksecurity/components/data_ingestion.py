@@ -39,7 +39,7 @@ class DataIngestion:
             if "_id" in df.columns:
                 df = df.drop(columns=["_id"], axis=1)
             logging.info(f"Converted MongoDB collection to DataFrame with shape: {df.shape}")
-            df.replace(to_replace="na", value=np.NAN, inplace=True)
+            df.replace(to_replace="na", value=np.nan, inplace=True)
             return df
         except Exception as e:
             raise NetworkSecurityException(e, sys)
@@ -49,8 +49,9 @@ class DataIngestion:
     def export_data_into_feature_store(self,dataframe:pd.DataFrame):
         try:
             feature_store_file_path = self.data_ingestion_config.feature_store_file_path
-            #createing folder
+            #creating folder
             dir_path = os.path.dirname(feature_store_file_path)
+            os.makedirs(dir_path, exist_ok=True)
             dataframe.to_csv(feature_store_file_path,index=False,header=True)
             return dataframe
         except Exception as e:
@@ -80,7 +81,7 @@ class DataIngestion:
             dataframe = self.export_data_into_feature_store(dataframe)
             self.split_data_as_train_test(dataframe)
 
-            data_ingestion_artifact =  DataIngestionArtifact(trained_file_path=self.data_ingestion_config.training_file_path,
+            data_ingestion_artifact =  DataIngestionArtifact(train_file_path=self.data_ingestion_config.training_file_path,
                                                            test_file_path=self.data_ingestion_config.testing_file_path)
             
             return data_ingestion_artifact
