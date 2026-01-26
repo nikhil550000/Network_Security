@@ -9,6 +9,7 @@ from networksecurity.pipeline.training_pipeline import TrainingPipeline
 
 def start_training():
     try:
+        logging.info("Starting training pipeline")
         model_training = TrainingPipeline()
         model_training.run_pipeline()
     except Exception as e:
