@@ -2,8 +2,19 @@ python-dotenv
 pandas
 numpy
 pymongo
-pymongo[srv]
 certifi
-
+pymongo[srv]
+scikit-learn
+dill
+pyyaml
+xgboost
+fastapi
+uvicorn
+ipykernel
+apache-airflow
+mlflow
+dvc
+jinja2
+python-multipart
 
 -e .
