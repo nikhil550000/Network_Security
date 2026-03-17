@@ -18,7 +18,7 @@ MODEL_FILE_NAME = 'model.pkl'
 SCHEMA_FILE_PATH = os.path.join('data_schema','schema.yaml')
 SCHEMA_DROP_COLS = 'drop_columns'
 
-SAVE_MODEL_DIR = os.path.join('saved_models')
+SAVED_MODEL_DIR = os.path.join('saved_models')
 
 """
 Data Ingestion related constant start with DATA_INGESTION VAR NAME
@@ -60,3 +60,15 @@ DATA_TRANSFORMATION_TEST_FILE_PATH: str = "test.npy"
 Model Trainer related constant start with MODE TRAINER VAR NAME
 """
 
+MODEL_TRAINER_DIR_NAME: str = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
+MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
+MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
+MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD: float = 0.05
+
+"""
+Model Evalaution ralated constant start with MODE TRAINER VAR NAME
+"""
+MODEL_EVALUATION_DIR_NAME: str = "model_evaluation"
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
+MODEL_EVALUATION_REPORT_NAME= "report.yaml"
