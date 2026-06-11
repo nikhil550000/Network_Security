@@ -6,3 +6,10 @@ __pycache__
 *.log
 artifact/
 networksecurity/__pycache__/
+aws/
+awscliv2.zip
+mlflow/
+mlruns/
+mlflow-artifacts/
+mlflow-*.tar.gz
+mlflow.db
