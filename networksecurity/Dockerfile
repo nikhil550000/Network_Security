@@ -1,10 +1,10 @@
-FROM python:3.10-slim-buster
+FROM python:3.10-slim
 USER root
 RUN mkdir /app
 COPY . /app/
 WORKDIR /app/
 RUN pip3 install -r requirements.txt
-ENV AWS_DEFAULT_REGION = "us-east-1"
+ENV AWS_DEFAULT_REGION="us-east-1"
 ENV BUCKET_NAME="mynetworksecurity"
 ENV PREDICTION_BUCKET_NAME="my-network-datasource"
 ENV AIRFLOW_HOME="/app/airflow"
